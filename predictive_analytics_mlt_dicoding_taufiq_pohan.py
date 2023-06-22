@@ -274,12 +274,6 @@ ispuRaw.loc[ispuRaw['stasiun'] == rawStations[5], 'stasiun'] = rawStations[4]
 
 ispuRaw['stasiun'].unique()
 
-"""### Hapus kolom location"""
-
-ispuRaw = ispuRaw.drop(['location'], axis=1)
-
-ispuRaw.describe(include = 'all')
-
 """## Merge kolom Categori dengan kolom kategori"""
 
 ispuRaw['categori'] = ispuRaw['categori'].combine_first(ispuRaw['kategori'])
@@ -287,6 +281,12 @@ ispuRaw['categori'] = ispuRaw['categori'].combine_first(ispuRaw['kategori'])
 """## Merge kolom so2 dengan kolom s02"""
 
 ispuRaw['so2'] = ispuRaw['so2'].combine_first(ispuRaw['s02'])
+
+ispuRaw.describe(include = 'all')
+
+"""## Hapus kolom location"""
+
+ispuRaw = ispuRaw.drop(['location'], axis=1)
 
 ispuRaw.describe(include = 'all')
 
