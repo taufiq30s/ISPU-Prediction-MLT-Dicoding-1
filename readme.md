@@ -1,5 +1,5 @@
 ﻿
-# Laporan Proyek Machine Learning - Moonchild
+# Laporan Proyek Machine Learning
 
 ## Domain Proyek
 
@@ -33,7 +33,7 @@ Berdasarkan uraian diatas, dapat disimpulkan bahwa permasalahan utama dari proye
 
 ### Goal
 
-Tujuan dari proyek ini adalah untuk mengimplementasikan model *machine learning* dengan jenis Time Series Forecasting untuk memprediksi salah satu komponen pencemar udara di Jakarta, yaitu NO<sub>2</sub>.
+Tujuan dari proyek ini adalah untuk mengimplementasikan model *machine learning* dengan jenis _Time Series Forecasting_ untuk memprediksi salah satu komponen pencemar udara di Jakarta, yaitu NO<sub>2</sub> sebagai bagian dari langkah mitigasi untuk mengurangi polusi udara di Jakarta.
 
   
 
@@ -41,7 +41,7 @@ Tujuan dari proyek ini adalah untuk mengimplementasikan model *machine learning*
 
 Tahapan untuk menyelesaikan tujuan dari proyek ini adalah sebagai berikut.
 
-1. Melakukan *Exploratory Data Analysis (EDA)* untuk melakukan pembersihan data, visualisasi diagram dan analisis tren Indeks Standar Pencemaran Udara
+1. Melakukan *Exploratory Data Analysis (EDA)* untuk melakukan pembersihan data, visualisasi diagram dan analisis tren dan normalitas Indeks Standar Pencemaran Udara
 
 2. Membangun model *machine learning* dimana akan menggunakan beberapa algoritma yaitu *ARIMA* dan *LSTM*
 
@@ -1268,7 +1268,8 @@ Selain kedua teknik tersebut, terdapat teknik _Rolling Statistics_ yang bekerja 
 Ada 3 metode untuk menggunakan metode ini, yaitu
 
 a. _Simple Moving Average_
-	![Simple Moving Average Formula](https://miro.medium.com/v2/resize:fit:640/format:webp/1*GqcyY6_vA-cvcj90Tg6KdA.png)
+
+![Simple Moving Average Formula](https://miro.medium.com/v2/resize:fit:640/format:webp/1*GqcyY6_vA-cvcj90Tg6KdA.png)
 
 _Simple Moving Average (SMA)_ merupakan salah satu metode yang paling simpel dimana nilai data sebelumnya yang sebanyak _n_ akan di jumlahkan dan akan di bagikan dengan _n_. Sederhananya, metode ini bekerja dengan mengganti data yang hilang dengan nilai rata-rata data sebelumnya sebesar _n_-data.
 
@@ -1417,7 +1418,8 @@ Jika suatu distribusi data tidak memenuhi kriteria berikut, dapat dilakukan lang
 
 * Metode normalisasi Box-Cox adalah transformasi yang memperhitungkan skewness dan kurtosis data asli. Transformasi ini menggunakan parameter lambda (λ) yang ditentukan secara otomatis untuk menghasilkan distribusi yang lebih simetris.
 
-* Rumus normalisasi Box-Cox:
+	Rumus normalisasi Box-Cox:
+  
 	![box-cox formula](https://www.leansigmacorporation.com/wp/wp-content/uploads/2016/01/Box-Cox-EQ1.png)
 
 * Dimana dalam rumus ini
