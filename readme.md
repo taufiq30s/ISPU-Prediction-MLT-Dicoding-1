@@ -1,5 +1,5 @@
 ﻿
-# Laporan Proyek Machine Learning
+# Laporan Proyek Machine Learning - M. Taufiq Hidayat Pohan
 
 ## Domain Proyek
 
