@@ -550,7 +550,7 @@ Tabel 23. Jumlah baris data yang memiliki nilai <i>NaN</i> dan <i>Zero</i>
 Gambar 3. Grafik total data ISPU berdasarkan kategori
 </p>
 
-Berdasarkan grafik ini dapat disimpulkan bahwa kategori ISPU maksimum di 5 stasiun SPKU di DKI Jakarta mayoritas kategori Sedang dengan persentase 66.76%, diikuti dengan kategori Baik dengan persentase 18.86%, Tidak Sehat dengan persentase 13.34%, Sangat Tidak Sehat dengan persentase 1.04% dan Berbahaya dengan persentase 0.005% dengan detail sebagai berikut.
+Berdasarkan Gambar 3 dapat disimpulkan bahwa kategori ISPU maksimum di 5 stasiun SPKU di DKI Jakarta mayoritas kategori Sedang dengan persentase 66.76%, diikuti dengan kategori Baik dengan persentase 18.86%, Tidak Sehat dengan persentase 13.34%, Sangat Tidak Sehat dengan persentase 1.04% dan Berbahaya dengan persentase 0.005% dengan detail sebagai berikut.
 
 | Kategori           | Total |
 | ------------------ | ----- |
@@ -570,7 +570,7 @@ Tabel 24. Total data ISPU berdasarkan kategori
 Gambar 4. Grafik Total data yang tercatat setiap stasiun
 </p>
 
-Berdasarkan grafik ini, total data ISPU yang dicatat oleh Stasiun DKI 1 sebesar 4273 data, DKI 2 sebesar 4032 data, DKI 3 sebesar 3980, DKI 4 sebesar 3974, dan DKI 5 sebesar 3277. Ini menunjukkan bahwa tidak semua stasiun melakukan pencatatan ISPU dalam satu hari yang sama.
+Berdasarkan Gambar 4, total data ISPU yang dicatat oleh Stasiun DKI 1 sebesar 4273 data, DKI 2 sebesar 4032 data, DKI 3 sebesar 3980, DKI 4 sebesar 3974, dan DKI 5 sebesar 3277. Ini menunjukkan bahwa tidak semua stasiun melakukan pencatatan ISPU dalam satu hari yang sama.
 
 
 #### 3.  Visualisasi dan Analisis Setiap Komponen Pencemar Udara Setiap Stasiun
