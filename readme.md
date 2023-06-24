@@ -1544,19 +1544,19 @@ Ada 3 metode untuk menggunakan metode ini, yaitu
 
 a. _Simple Moving Average_
 
-![Simple Moving Average Formula](https://miro.medium.com/v2/resize:fit:640/format:webp/1*GqcyY6_vA-cvcj90Tg6KdA.png)
+$$P_t = (P_{t-1} + P_{t-2} + P_{t-3} ... P_{t-n})/n$$
 
 _Simple Moving Average (SMA)_ merupakan salah satu metode yang paling simpel dimana nilai data sebelumnya yang sebanyak _n_ akan dijumlahkan dan akan di bagikan dengan _n_. Sederhananya, metode ini bekerja dengan mengganti data yang hilang dengan nilai rata-rata data sebelumnya sebesar _n_-data.
 
 b. _Weighted Moving Average_
 
-![Weighted Moving Average Formula](https://miro.medium.com/v2/resize:fit:720/format:webp/1*6PlxApRuwnKzomxEaN1zjw.png)
+$$P_t = (N * P_{t-1} + (N - 1) * P_{t-2} + (N - 2) * P_{t-3} ... 1 * P_{t-n}) / (N * (N + 1) / 2)$$
 
 _Weighted Moving Average (WMA)_ adalah metode lainnya dimana nilai yang akan dijumlahkan akan diberikan sebuah _weigth_ atau bobot dimana bobot ini didistribusikan secara merata sehingga jumlah keseluruhan bobotnya adalah 1 (100%). Contohnya, jika rata-rata yang ingin diambil adalah rata-rata 5 hari sebelumnya, maka bobotnya adalah: **5/15; 4/15; 3/15; 2/15; 1/15** dimana jika dijumlahkan akan menghasilkan 1.
 
 c. _Exponential Moving Average_
 
-![_Exponential Moving Average Formula](https://miro.medium.com/v2/resize:fit:720/format:webp/1*1tmY0vW2LmgAY4ASIWD-5A.png)
+$$\hat Y_{t-1} = \alpha[Y_t + (1-\alpha)Y_{t-1} + (1-\alpha)^2Y_{t-2} + (1-\alpha)^3Y_{t-3} + ...]$$
 
 _Exponential Moving Average (EMA)_ adalah metode yang memiliki kinerja mirip dengan _WMA_, namun jika di _WMA_ penurunan bobotnya konsisten, penurunan pada _EMA_ bersifat eksponensial dimana nilai _alpha_ merupakan nilai _smoothing factor_ mirip seperti penentuan bobot pada _WMA_.
 
