@@ -30,7 +30,7 @@ Berdasarkan uraian diatas, dapat ditarik sebagai berikut
 
 * Apakah terdapat perubahan dalam tingkat polutan udara dalam periode tahun 2010 hingga 2021?
 * Model _machine learning_ seperti apa yang dapat memberikan akurasi terbaik?
-* Bagaimana cara membangun model _machine learning_ untuk memprediksi kadar NO<sub>2</sub> pada udara sehingga dapat membantu pihak yang berkentingan dalam melakukan evaluasi dan mitigasi kebijakan untuk mengurangi kadar polutan udara?
+* Bagaimana cara membangun model _machine learning_ untuk memprediksi kadar NO<sub>2</sub> pada udara sehingga dapat membantu pihak yang berkepentingan dalam melakukan evaluasi dan mitigasi kebijakan untuk mengurangi kadar polutan udara?
 
 ### Goal
 
@@ -71,7 +71,7 @@ Variabel yang terdapat dalam dataset tersebut sebagai berikut
 3.  pm10 : Partikulat salah satu parameter yang diukur
 4.  pm25 : Partikulat salah satu parameter yang diukur
 5.  so2 : Sulfida (dalam bentuk SO2) salah satu parameter yang diukur
-6.  co : Carbon Monoksida salah satu parameter yand diukur
+6.  co : Carbon Monoksida salah satu parameter yang diukur
 7.  o3 : Ozon salah satu parameter yang diukur
 8.  no2 : NItrogen dioksida salah satu parameter yang diukur
 9.  max : Nilai ukur paling tinggi dari seluruh parameter yang diukur dalam waktu yang sama
@@ -89,7 +89,7 @@ Kemudian setiap dataset dipisah menjadi **12 file csv** dan memiliki 2 jenis, ya
 Gambar 2. Tampilan isi dari dataset ISPU tahun 2020
 </p>
 
-Pembeda antara dataset Indeks Standar Pencemar Udara di SPKU dengan Indeks Standar Pencemar Udara di Provinsi DKI Jakarta adalah data dari Indeks Standar Pencemar Udara di Provinsi merupakan hasil aggregat dari dataset Indeks Standar Pencemar Udara di SPKU.
+Pembeda antara dataset Indeks Standar Pencemar Udara di SPKU dengan Indeks Standar Pencemar Udara di Provinsi DKI Jakarta adalah data dari Indeks Standar Pencemar Udara di Provinsi merupakan hasil agregat dari dataset Indeks Standar Pencemar Udara di SPKU.
 
 Misalkan ada dataset akumulatif setiap stasiun untuk tanggal 21 Juni 2023 sepert **tabel 1** berikut.
 
@@ -115,7 +115,7 @@ Jika memperhatikan kolom **max** dari semua stasiun yang dicatat pada tanggal te
 Tabel 2. Contoh data di dataset Indeks Standar Pencemar Udara di Provinsi DKI Jakarta
 </p>
 
-Untuk penetuan kategori pada kolom **categori** telah tercantum berdasarkan Lampiran II Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor P.14/MENLHK/SETJEN/KUM.1/7/2020  sebagai berikut
+Untuk penentuan kategori pada kolom **categori** telah tercantum berdasarkan Lampiran II Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor P.14/MENLHK/SETJEN/KUM.1/7/2020  sebagai berikut
 | Kategori           | Status Warna | Angka Rentang |
 |--------------------|--------------|---------------|
 | Baik               |     Hijau    |     1 - 50    |
@@ -168,8 +168,8 @@ Tabel 4. Detail kolom yang terdapat di dataset
 
 Di tahap EDA ini, penulis akan melakukan beberapa tahapan berikut
 * Pembersihan Data
-* Visualisasi dan analisa setiap komponen pencemar udara
-* Visualisasi dan analisa setiap komponen pencemar udara setiap stasiun
+* Visualisasi dan analisis setiap komponen pencemar udara
+* Visualisasi dan analisis setiap komponen pencemar udara setiap stasiun
 * _Missing Value_
 * Analisis dan transformasi Skewness dan Kurtosis
 * Uji dan transformasi stasioneritas *Time Series*
@@ -219,7 +219,7 @@ Tabel 6. Kondisi kolom _Unnamed[x]_
 Setelah menghapus kolom yang bernilai NaN, langkah berikutnya adalah menghapus baris dimana seluruh data nya adalah NaN.  Langkah untuk menghapus baris yang NaN adalah dengan menjalankan `dropna` dimana subset kolomnya adalah **tanggal**.
 
 ##### 1.3. Periksa dan Normalisasi Format Tanggal
-Format tanggal yang digunakan dalam dataset adalah "YYYY-MM-DD" (contohnya: 2023-06-21). Sebelum memasuki tahapan berikutnya, perlu melakukan pemeriksaan tanggal yang tidak sesuai format agak data konsistan dan seragam. Setelah dilakukan pemeriksaan, ditemukan terdapat 274 data yang data tanggalnya tidak sesuai format dimana salah satu sampel data yang bermasalah seperti tabel berikut.
+Format tanggal yang digunakan dalam dataset adalah "YYYY-MM-DD" (contohnya: 2023-06-21). Sebelum memasuki tahapan berikutnya, perlu melakukan pemeriksaan tanggal yang tidak sesuai format agar data konsisten dan seragam. Setelah dilakukan pemeriksaan, ditemukan terdapat 274 data yang data tanggalnya tidak sesuai format dimana salah satu sampel data yang bermasalah seperti tabel berikut.
 
 |       | tanggal    | stasiun                          | pm10   |   so2 |   co |   o3 |   no2 |   max | critical   | categori   |   s02 |   keterangan |   kategori |   pm25 |   location |
 |------:|:-----------|:---------------------------------|:-------|------:|-----:|-----:|------:|------:|:-----------|:-----------|------:|-------------:|-----------:|-------:|-----------:|
@@ -248,7 +248,7 @@ Tabel 8. Sampel dari Data yang Sudah Diperbaiki
 
 ##### 1.4. Normalisasi struktur data Bulan Juni hingga Juli 2021
 
-Langkah berikutnya adalah melakukan pemeriksaan nilai NaN pada kolom stasiun, dan ditemukan terdapat 305 baris data yang bernilai NaN. Setelah dilakukan analisa, ternyata ditemukan inkonsistensian pengisian data Bulan Juni hinggal Juli 2021 di seluruh stasiun, dimana salah satu sampelnya dapat dilihat di tabel berikut.
+Langkah berikutnya adalah melakukan pemeriksaan nilai NaN pada kolom stasiun, dan ditemukan terdapat 305 baris data yang bernilai NaN. Setelah dilakukan analisa, ternyata ditemukan inkonsistensi pengisian data Bulan Juni hingga Juli 2021 di seluruh stasiun, dimana salah satu sampelnya dapat dilihat di tabel berikut.
 
 |       | tanggal             |   stasiun | pm10               |   so2 |   co |   o3 |   no2 |   max |   critical | categori   |   s02 |   keterangan |   kategori |   pm25 | location   |
 |------:|:--------------------|----------:|:-------------------|------:|-----:|-----:|------:|------:|-----------:|:-----------|------:|-------------:|-----------:|-------:|:-----------|
@@ -298,7 +298,7 @@ Langkah berikutnya adalah memeriksa data unik stasiun. Seperti di penjelasan des
     '89', '69', '101', '57', '73', '78', '22', '24', '25'], 
     dtype=object)
 
-Dimana jika diperhatikan terdapat 2 stasiun DKI5, yaitu **"DKI5 (Kebon Jeruk)"** dan **"DKI5 (Kebon Jeruk) Jakarta Barat"**. Selain itu, terdapat beberapa angka dan data kosong **"---"**.
+Dimana jika diperhatikan terdapat 2 stasiun DKI 5, yaitu **"DKI5 (Kebon Jeruk)"** dan **"DKI5 (Kebon Jeruk) Jakarta Barat"**. Selain itu, terdapat beberapa angka dan data kosong **"---"**.
 
 Untuk melakukan perbaikan data stasiun, ada 2 tahapan yang harus dilakukan, yaitu menganalisis data stasiun yang berisi selain 5 stasiun diatas (termasuk duplikatnya) dan melakukan perbaikan posisi data.
 
@@ -345,9 +345,9 @@ Setelah melakukan perbaikan posisi data, tahapan berikutnya adalah melakukan _re
 
 ##### 1.6. Gabungkan data kolom yang sejenis dan hapus kolom yang tidak digunakan
 
-Setelah melakukan perbaikan format data, langkah berikut nya adalah melakukan penyatuan kolom yang sama secara konteks. Ada **2 kolom** yang akan disatukan, yaitu kolom **categori** dengan **kategori** dan kolom **so2** dengan **s02**.
+Setelah melakukan perbaikan format data, langkah berikutnya adalah melakukan penyatuan kolom yang sama secara konteks. Ada **2 kolom** yang akan disatukan, yaitu kolom **categori** dengan **kategori** dan kolom **so2** dengan **s02**.
 
-Setelah melakukan penggabungkan, maka langkah berikutnya adalah menghapus kolom yang tidak digunakan. Selain kolom **kategori** dan **s02** yang sudah tidak digunakan karena sudah digabungkan, kolom **location** juga dihapus karena kolom tersebut tidak memiliki data apapun setelah dipindahkan ke kolom **stasiun**.
+Setelah melakukan penggabungan, maka langkah berikutnya adalah menghapus kolom yang tidak digunakan. Selain kolom **kategori** dan **s02** yang sudah tidak digunakan karena sudah digabungkan, kolom **location** juga dihapus karena kolom tersebut tidak memiliki data apapun setelah dipindahkan ke kolom **stasiun**.
 
 ##### 1.7. Perbaiki format kolom "categori" dan "critical"
 
@@ -410,7 +410,7 @@ Setelah diperiksa, ditemukan hasil sebagai berikut.
     ['CO' 'O3' 'PM10' 'NO2' 'SO2' 'PM25' 'BAIK'] 
     ['SEDANG' 'BAIK' 'TIDAK SEHAT' 'SANGAT TIDAK SEHAT' 'BERBAHAYA' nan]
 
-Dari hasil tersebut, baris pertama merupakan data unik dari kolom "critical" dan baris berikutnya merupakan data unik dari kolom "categori". Disini dapat disimpulkan pada kolom "critical" terdapat sebuah data **BAIK** dimana data tersebut harusnya ada di kolom "categori". Selain itu di kolom "categori" terdapat data yang berupa _NaN_.
+Dari hasil tersebut, baris pertama merupakan data unik dari kolom "critical" dan baris berikutnya merupakan data unik dari kolom "categori". Disini dapat disimpulkan pada kolom "critical" terdapat sebuah data **BAIK** dimana data tersebut seharusnya ada di kolom "categori". Selain itu di kolom "categori" terdapat data yang berupa _NaN_.
 
 Untuk itu perlu dilakukan analisa data yang bermasalah tersebut, dan hasilnya ditemukan sebuah masalah di baris dengan indeks **21967**.
 
@@ -422,7 +422,7 @@ Untuk itu perlu dilakukan analisa data yang bermasalah tersebut, dan hasilnya di
 Tabel 16. Isi baris data di indeks 21967
 </p>
 
-Disini dapat disimpulkan terdapat anomali data dimana data di kolom **max** yang harusnya adalah nilai ISPU maksimal dari seluruh komponen pencemar, namun diisi dengan data dari kolom **critical**, begitu juga data di kolom **critical** yang harusnya berada di kolom **categori**. Untuk itu dilakukan pemindahan data ke kolom yang sebenarnya sehingga hasilnya sebagai berikut.
+Disini dapat disimpulkan terdapat anomali data dimana data di kolom **max** yang seharusnya adalah nilai ISPU maksimal dari seluruh komponen pencemar, namun diisi dengan data dari kolom **critical**, begitu juga data di kolom **critical** yang seharusnya berada di kolom **categori**. Untuk itu dilakukan pemindahan data ke kolom yang sebenarnya sehingga hasilnya sebagai berikut.
 
 |       | tanggal             | stasiun            |   pm10 |   so2 |   co |   o3 |   no2 |   max | critical   | categori   |   pm25 |
 |------:|:--------------------|:-------------------|-------:|------:|-----:|-----:|------:|------:|:-----------|:-----------|-------:|
@@ -523,11 +523,11 @@ Mayoritas permasalahan terjadi pada data di tanggal 8 Oktober 2016, 8-9 November
 
 Untuk perbaikan data di tanggal 8 Oktober 2016, 8-9 November 2016 dab 8 Desember 2016 bisa dilakukan dengan cara mengambil indeks baris yang bermasalah kemudian ubah data tanggal tersebut.
 
-Sedangkan untuk data bulan Septermber 2016, perbaikan dilakukan dengan melakukan perulangan dari indeks tanggal 1 Agustus 2016 yang duplikat hingga 30 Agustus 2016 yang duplikat.
+Sedangkan untuk data bulan September 2016, perbaikan dilakukan dengan melakukan perulangan dari indeks tanggal 1 Agustus 2016 yang duplikat hingga 30 Agustus 2016 yang duplikat.
 
 Sedangkan untuk data bulan Juni 2020 perlu diperiksa secara manual data selama satu bulan tersebut untuk menentukan tanggal dimana data tersebut mulai bermasalah, dan melakukan perulangan dengan mengambil indeks baris yang bermasalah dan memperbaikinya.
 
-#### 2. Visualisasi dan Analisa Setiap Komponen Pencemar Udara Secara Umum
+#### 2. Visualisasi dan Analisis Setiap Komponen Pencemar Udara Secara Umum
 
 ##### 2.1. Analisa data yang bernilai NaN dan _Zero_
 
@@ -573,7 +573,7 @@ Gambar 4. Grafik Total data yang tercatat setiap stasiun
 Berdasarkan grafik ini, total data ISPU yang dicatat oleh Stasiun DKI 1 sebesar 4273 data, DKI 2 sebesar 4032 data, DKI 3 sebesar 3980, DKI 4 sebesar 3974, dan DKI 5 sebesar 3277. Ini menunjukkan bahwa tidak semua stasiun melakukan pencatatan ISPU dalam satu hari yang sama.
 
 
-#### 3.  Visualisasi dan Analisa Setiap Komponen Pencemar Udara Setiap Stasiun
+#### 3.  Visualisasi dan Analisis Setiap Komponen Pencemar Udara Setiap Stasiun
 
 ##### 3.1. Analisa ISPU DKI 1 (Bundaran HI)
 
@@ -626,7 +626,7 @@ Tabel 26. Jumlah baris data yang memiliki nilai <i>NaN</i> dan <i>Zero</i>
 
 **Berdasarkan hasil analisis _Missing Value_, _Zero Value_ serta tanggal _Range_ berikut**
 
-* Data dari DKI1 dicatat mulai dari tanggal 01 Januari 2010 hingga 31 Desember 2021
+* Data dari DKI 1 dicatat mulai dari tanggal 01 Januari 2010 hingga 31 Desember 2021
 
 * Secara total, terdapat 383 Data NaN dimana PM10, O3, dan NO3 merupakan komponen udara yang paling banyak data NaN
 
@@ -658,7 +658,7 @@ Gambar 5. Grafik indeks pencemar udara PM<sub>10</sub> di DKI 1
 
 	* Pada tahun 2020, setelah penurunan terjadi tren peningkatan sejak bulan Maret hingga mengalami penurunan secara tajam sejak memasuki bulan November 2020. Peningkatan terjadi di akhir November dan mulai turun dan stagnan di bulan Desember hingga akhir tahun 2020
 
-	* Pada tahun 2021, tren indeks sempat tinggi di Januari kemudian selama Febuari mengalami stagnasi hingga perlahan mengalami peningkatan dari Maret hingga Agustus dan September. Setelah itu mengalami tren penurunan hingga akhir November dan kembali mengalami peningkatan di Desember
+	* Pada tahun 2021, tren indeks sempat tinggi di Januari kemudian selama Februari mengalami stagnasi hingga perlahan mengalami peningkatan dari Maret hingga Agustus dan September. Setelah itu mengalami tren penurunan hingga akhir November dan kembali mengalami peningkatan di Desember
 
 d. Analisis Komponen O<sub>3</sub>
 
@@ -704,11 +704,11 @@ Gambar 7. Grafik indeks pencemar udara SO<sub>2</sub> di DKI 1
 
 * Pada tahun 2015 terjadi peningkatan yang cukup pesat, terutama di bulan April dan pali besar terjadi di bulan Juni hingga Oktober, setelah itu terjadi penurunan dan sempat meningkat di awal Desember yang setelah itu kembali stagnan hingga akhir tahun
 
-* Pada awal tahun 2016 terjadi peningkatan yang sangat tajam dan mulai menurun di pertengahan bulan Febuari. Pada bulan Maret hingga April, indeks mengalami stagnasi dan mulai April pertengahan mengalami tren kenaikan secara perlahan hingga tahun 2017 awal
+* Pada awal tahun 2016 terjadi peningkatan yang sangat tajam dan mulai menurun di pertengahan bulan Februari. Pada bulan Maret hingga April, indeks mengalami stagnasi dan mulai April pertengahan mengalami tren kenaikan secara perlahan hingga tahun 2017 awal
 
 * Pada awal tahun 2017, grafik terputus yang disebabkan indeks SO2 di tanggal tersebut tidak tercatat, namun bisa terlihat dari data-data berikutnya, posisi indeks berada lebih rendah dibandingkan indeks di awal tahun. Kemungkinan di antara tanggal dimana indeks SO2 tidak tercatat, telah terjadi tren penurunan indeks.
 
-* Di bulan Febuari 2017 kembali terjadi tren peningkatan indeks SO2 dan mengalami perlambatan sejak di pertengahan November, namun tetap terjadi peningkatan indeks hingga akhir tahun
+* Di bulan Februari 2017 kembali terjadi tren peningkatan indeks SO2 dan mengalami perlambatan sejak di pertengahan November, namun tetap terjadi peningkatan indeks hingga akhir tahun
 
 * Pada tahun 2018, peningkatan indeks tetap terus terjadi hingga mengalami penurunan di pertengahan tahun, kemudian kembali terjadi peningkatan hingga pada akhir tahun terjadi penurunan
 
@@ -716,7 +716,7 @@ Gambar 7. Grafik indeks pencemar udara SO<sub>2</sub> di DKI 1
 
 * Pada tahun 2020 terjadi lonjakan kenaikan indeks SO2 hingga melampaui level 60 ISPU. Setelah itu terjadi tren penurunan hingga pertengahan bulan dan mulai meningkat hingga terjadi peningkatan yang sangat tajam di bulan November dan menurun hingga awal Desember. Setelah itu indeks kembali mulai stagnasi hingga akhir tahun
 
-* Pada tahun 2021 indeks bergerak menurun kemudian kembali naik dengan cukup cepat hingga pada akhir tahun, indeks sudah menyentuk di level antara level 40 dan 60 ISPU
+* Pada tahun 2021 indeks bergerak menurun kemudian kembali naik dengan cukup cepat hingga pada akhir tahun, indeks sudah menyentuh di level antara level 40 dan 60 ISPU
 
 f. Analisis Komponen NO<sub>2</sub>
 
@@ -740,7 +740,7 @@ Gambar 8. Grafik indeks pencemar udara NO<sub>2</sub> di DKI 1
 
 * Setelah memasuki bulan Maret 2020, terjadi peningkatan secara lambat hingga terjadi puncaknya dimana pergerakan indeks meningkat drastis di akhir Oktober dan November 2020. Indeks kembali menurun dengan tajam di akhir November dan penurunan melambat hingga mendekati akhir tahun.
 
-* Di akhir tahun 2020, indeks bergerak naik hingga mencapai puncaknya di Juni 2021, kemduian menurun di bulan Juli dan perlahan naik hingga akhir Oktober.
+* Di akhir tahun 2020, indeks bergerak naik hingga mencapai puncaknya di Juni 2021, kemudian menurun di bulan Juli dan perlahan naik hingga akhir Oktober.
 
 * Setelah itu terjadi penurunan yang tajam, dan tidak lama berselang terjadi fluktuasi yang tajam hingga kembali turun dan perlahan memulai tren kenaikan indeks di akhir tahun
 
@@ -760,7 +760,7 @@ Gambar 9. Grafik indeks pencemar udara CO di DKI 1
 
 	* Setelah pertengahan tahun 2011, indeks mengalami peningkatan yang lambat hingga awal tahun 2012
 
-	* Di tahun 2012, indeks mengalami fluktuatif dimana di separuh pertama tahun menglami penurunan sebanyak dua kali, kemudian di bulan Agustus mengalami penurunan paling rendah, setelah itu kembali meningkat hingga pengalami penurunan kembali di Desember
+	* Di tahun 2012, indeks mengalami fluktuatif dimana di separuh pertama tahun mengalami penurunan sebanyak dua kali, kemudian di bulan Agustus mengalami penurunan paling rendah, setelah itu kembali meningkat sehingga mengalami penurunan kembali di Desember
 
 	* Di tahun 2013 diawali dengan peningkatan indeks yang cukup besar, kemudian dilanjutkan dengan fluktuatifnya indeks dimana terjadi kenaikan yang paling besar di pertengahan bulan diikuti dengan penurunan yang tajam setelahnya. Setelah itu indeks berangsur-angsur menaik walaupun pergerakannya sangat fluktuatif hingga akhir tahun
 
@@ -768,7 +768,7 @@ Gambar 9. Grafik indeks pencemar udara CO di DKI 1
 
 	* Indeks mulai menurun di akhir tahun 2015
 
-* Bedasarkan data di tahun 2016 hingga 2021, pergerakan indeks CO tidak sebesar di _range_ waktu sebelumnya dengan detail sebagai berikut
+* Berdasarkan data di tahun 2016 hingga 2021, pergerakan indeks CO tidak sebesar di _range_ waktu sebelumnya dengan detail sebagai berikut
 
 	* Di awal tahun 2016, indeks mengalami peningkatan yang konsisten dan sempat melewati level 50 ISPU. Namun setelah itu, indeks tidak pernah melewati level 50 ISPU dan sejak mendekati akhir tahun, indeks bergerak menurun hingga akhir tahun
 
@@ -778,9 +778,9 @@ Gambar 9. Grafik indeks pencemar udara CO di DKI 1
 
 	* Di tahun 2019, indeks kembali mengalami apa yang terjadi di dua tahun sebelumnya dimana di awal tahun mengalami peningkatan yang peningkatan kemudian di pertengahan tahun mengalami penurunan. Namun di tahun ini, terjadi peningkatan cukup konsisten di akhir tahun hingga puncaknya terjadi di awal tahun 2020
 
-	* Di awal tahun 2020, indeks pengalami puncak kenaikannya sejak akhir tahun lalu, dan kemudian melandai dengan cukup dalam di pertengahan tahun, meskipun sempat mengalami peningkatan yang drastis menjelang akhir tahun, namun indeks kembali menurun di bawah level 10 ISPU hingga akhir tahun.
+	* Di awal tahun 2020, indeks mengalami puncak kenaikannya sejak akhir tahun lalu, dan kemudian melandai dengan cukup dalam di pertengahan tahun, meskipun sempat mengalami peningkatan yang drastis menjelang akhir tahun, namun indeks kembali menurun di bawah level 10 ISPU hingga akhir tahun.
 
-	* Di tahun 2021, indeks mengalmi kenaikan, meskipun begitu indeks bergerak sangat fluktuatif rata-rata berada di _range_ 10 hingga 25 ISPU, dan setelah itu mengalami penurunan rata-rata nya di pertengahan tahun hingga akhir tahun mengalami tren kenaikan
+	* Di tahun 2021, indeks mengalami kenaikan, meskipun begitu indeks bergerak sangat fluktuatif rata-rata berada di _range_ 10 hingga 25 ISPU, dan setelah itu mengalami penurunan rata-rata nya di pertengahan tahun hingga akhir tahun mengalami tren kenaikan
 
 h. Analisis _Skewness_
 
@@ -790,7 +790,7 @@ h. Analisis _Skewness_
 Gambar 10. Grafik Skewness dan Kurtosis untuk komponen pencemar di Stasiun DKI 1
 </p>
 
-Berdasarkan histogram diatas, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dimanai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
+Berdasarkan histogram diatas, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dinamakan skor skew rata-rata berada di luar range -0.5 sampai 0.5.
 
 ##### 3.2. Analisa ISPU DKI 2 (Kelapa Gading)
 
@@ -817,7 +817,7 @@ Berdasarkan tabel diatas
 
 * Kandungan PM10 menempati urutan kedua dengan nilai ISPU rata-rata 55.20 dengan nilai maksimum 116
 
-* Kandungan SO2 menempati urutan ketiga dengan nilai ISPU rata-rata 20.44 dengan nilai maksmimum 103
+* Kandungan SO2 menempati urutan ketiga dengan nilai ISPU rata-rata 20.44 dengan nilai maksimum 103
 
 * Kandungan CO menempati urutan keempat dengan nilai ISPU rata-rata sebesar 18.50 dengan nilai maksimum 75
 
@@ -904,7 +904,7 @@ Gambar 13. Grafik indeks pencemar udara SO<sub>2</sub> di DKI 2
 
 * Di tahun 2018, indeks justru menurun dan stagnan mendekati pertengahan tahun hingga akhir tahun
 
-* Di tahun 2019, indeks kembali menurun setelah awal tahun dan bergerak stagnan dan tidak sefluktuatif di tahun sebelumnya
+* Di tahun 2019, indeks kembali menurun setelah awal tahun dan bergerak stagnan dan tidak fluktuatif di tahun sebelumnya
 
 * Di tahun 2020, indeks mulai bergerak mirip seperti sebelum tahun 2018, namun pergerakan mendekati akhir tahun mengalami peningkatan sangat tinggi, setelah itu kembali jatuh dan bergerak menurun di awal tahun berikutnya
 
@@ -946,7 +946,7 @@ Gambar 15. Grafik indeks pencemar udara CO di DKI 2
 
 * Pada awal tahun 2017, indeks menurun dan mulai mengalami pola yang terjadi sebelum tahun 2015
 
-* Sejak tahun 2018 hingga 2021, pola bergerak dimana sempat mengalami peningkatan di awal tahun dan menurun di pertengahan tahun, kemudian meningkat di akhir tahun, namun di tahun 2021, pergerakan tidak sefluktuatif di tahun-tahun sebelumnya
+* Sejak tahun 2018 hingga 2021, pola bergerak dimana sempat mengalami peningkatan di awal tahun dan menurun di pertengahan tahun, kemudian meningkat di akhir tahun, namun di tahun 2021, pergerakan tidak fluktuatif di tahun-tahun sebelumnya
 
 h. Analisis _Skewness_
 
@@ -956,7 +956,7 @@ h. Analisis _Skewness_
 Gambar 16. Grafik Skewness dan Kurtosis untuk komponen pencemar di Stasiun DKI 2
 </p>
 
-Berdasarkan histogram berikut, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dimanai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
+Berdasarkan histogram berikut, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dinamai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
 
 ##### 3.3. Analisa ISPU DKI 3 (Jagaraksa)
 
@@ -983,7 +983,7 @@ Tabel 29. Deskripsi data stasiun DKI 3
 
 * Kandungan PM10 menempati urutan kedua dengan nilai ISPU rata-rata 43.55 dengan nilai maksimum 274
 
-* Kandungan CO menempati urutan ketiga dengan nilai ISPU rata-rata 19.94 dengan nilai maksmimum 98
+* Kandungan CO menempati urutan ketiga dengan nilai ISPU rata-rata 19.94 dengan nilai maksimum 98
 
 * Kandungan SO2 menempati urutan keempat dengan nilai ISPU rata-rata sebesar 15.74 dengan nilai maksimum 112
 
@@ -1050,7 +1050,7 @@ Gambar 18. Grafik indeks pencemar udara O<sub>3</sub> di DKI 3
 
 * Berdasarkan data tahun 2010 hingga 2015
 
-	* Nilai O3 mencapat puncaknya di bulan November 2010 dan Oktober - November 2012
+	* Nilai O3 mencapai puncaknya di bulan November 2010 dan Oktober - November 2012
 
 	* Penurunan nilai O3 cukup drastis terjadi akhir tahun 2014, awal dan akhir tahun 2015
 
@@ -1120,7 +1120,7 @@ Gambar 20. Grafik indeks pencemar udara NO<sub>2</sub> di DKI 3
 
 * Berdasarkan data dari tahun 2016 hingga 2021
 
-	* Meskipun membentuk pola yang mirip dengan _range_ tahun 2010 hingga 2015, namun pola di _range_ ini sedikit berfluaktif
+	* Meskipun membentuk pola yang mirip dengan _range_ tahun 2010 hingga 2015, namun pola di _range_ ini sedikit berfluktuatif
 
 	* Pada akhir pertengahan 2016, nilai NO2 sempat mengalami peningkatan hingga nilai ISPU melewati 20.
 
@@ -1156,7 +1156,7 @@ h. Analisis _Skewness_
 Gambar 22. Grafik Skewness dan Kurtosis untuk komponen pencemar di Stasiun DKI 3
 </p>
 
-Berdasarkan histogram berikut, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dimanai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
+Berdasarkan histogram berikut, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dinamai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
 
 ##### 3.4. Analisa ISPU DKI 4 (Lubang Buaya)
 
@@ -1185,7 +1185,7 @@ Tabel 31. Deskripsi data stasiun DKI 4
 
 * Kandungan SO2 menempati urutan ketiga dengan nilai ISPU rata-rata sebesar 20.76 dengan nilai maksimum 72
 
-* Kandungan CO menempati urutan keempat dengan nilai ISPU rata-rata 17.61 dengan nilai maksmimum 134
+* Kandungan CO menempati urutan keempat dengan nilai ISPU rata-rata 17.61 dengan nilai maksimum 134
 
 * Kandungan NO2 menempati urutan terakhir dengan nilai ISPU rata-rata 12.30 dan nilai maksimum 107
 
@@ -1319,7 +1319,7 @@ h. Analisis _Skewness_
 Gambar 28. Grafik Skewness dan Kurtosis untuk komponen pencemar di Stasiun DKI 4
 </p>
 
-Berdasarkan histogram berikut, seluruh histogram selain Histogram SO<sub>2</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dimanai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
+Berdasarkan histogram berikut, seluruh histogram selain Histogram SO<sub>2</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dinamai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
 
 Meskipun begitu, pada Histogram SO2 ada 2 titik puncak dimana titik puncak tertinggi berada pada range 0-10.
 
@@ -1350,7 +1350,7 @@ Tabel 33. Deskripsi data stasiun DKI 5
 
 * Kandungan CO menempati urutan ketiga dengan nilai ISPU rata-rata sebesar 22.94 dengan nilai maksimum 243
 
-* Kandungan SO2 menempati urutan keempat dengan nilai ISPU rata-rata 13.70 dengan nilai maksmimum 51
+* Kandungan SO2 menempati urutan keempat dengan nilai ISPU rata-rata 13.70 dengan nilai maksimum 51
 
 * Kandungan NO2 menempati urutan terakhir dengan nilai ISPU rata-rata 11.21 dan nilai maksimum 135
 
@@ -1396,7 +1396,7 @@ Gambar 29. Grafik indeks pencemar udara PM<sub>10</sub> di DKI 5
 
 * Terjadinya pola _seasional_ dimana ada pola indeks PM10 mengalami kenaikan secara umum di pertengahan tahun dan akan menurun di akhir tahun.
 
-* Meskipun begitu, berdasarkan data di tahun 2012 - 2016, sempat terjadi kenaikan indeks secara besar di sekitaran bulan Febuari dan Maret 2014 dan sekitaran Juni dan Juli 2015.
+* Meskipun begitu, berdasarkan data di tahun 2012 - 2016, sempat terjadi kenaikan indeks secara besar di sekitaran bulan Februari dan Maret 2014 dan sekitaran Juni dan Juli 2015.
 
 * Kenaikan tertinggi terjadi di pertengahan tahun 2018 dan sekitaran awal tahun 2019 dimana indeks di awal tahun 2019 sangat dekat dengan level 250
 
@@ -1414,7 +1414,7 @@ Gambar 30. Grafik indeks pencemar udara O<sub>3</sub> di DKI 5
 
 **Berdasarkan grafik diatas**
 
-* Pola pada data tahun 2013-2015 cukup berfluaktif
+* Pola pada data tahun 2013-2015 cukup berfluktuatif
 
 * Sejak dari tahun 2015 hingga 2017, peningkatan O3 terjadi menjelang akhir tahun, walaupun di tahun 2015 terjadi peningkatan O3 di sekitar bulan Maret dan April kemudian perlahan menurun
 
@@ -1424,9 +1424,9 @@ Gambar 30. Grafik indeks pencemar udara O<sub>3</sub> di DKI 5
 
 * Berdasarkan data tahun 2020
 
-* Peningkatan tertinggi terjadi di akhir bulan Febuari dan berpuncak di tanggal 1 Maret dan mulai menurun sejak pertengahan Maret hingga April
+* Peningkatan tertinggi terjadi di akhir bulan Februari dan berpuncak di tanggal 1 Maret dan mulai menurun sejak pertengahan Maret hingga April
 
-* Sejak akhir September hingga akhir Oktober, terjadi penurunan yang sangat tajam dimana sebelumnya Indeks berada diatas level 100 kemudian menurun di bawah level 50 dan mendekati level 0 ISPU
+* Sejak akhir September hingga akhir Oktober, terjadi penurunan yang sangat tajam dimana sebelumnya Indeks berada di atas level 100 kemudian menurun di bawah level 50 dan mendekati level 0 ISPU
 
 * Peningkatan kembali terjadi di 1 November dan bergerak melewati level 50 ISPU di beberapa hari kedepannya
 
@@ -1482,7 +1482,7 @@ Gambar 33. Grafik indeks pencemar udara CO di DKI 5
 
 * Dari bulan Juli 2014 hingga awal tahun 2016, indeks rata-rata berada di bawah 40 ISPU, kemudian di bulan berikutnya terjadi peningkatan hingga mengalami tren penurunan di pertengahan tahun 2017 hingga awal tahun 2018
 
-* Setelah itu terjadi peningkatan selama beberapa pulan kemudian menurun dan mulai stagnan hingga mulai pertengahan 2019
+* Setelah itu terjadi peningkatan selama beberapa bulan kemudian menurun dan mulai stagnan hingga mulai pertengahan 2019
 
 * Sejak pertengahan 2019 indeks menurun hingga mendekati akhir 2019 dan mulai meningkat hingga awal tahun 2020
 
@@ -1496,7 +1496,7 @@ h. Analisis _Skewness_
 Gambar 34. Grafik Skewness dan Kurtosis untuk komponen pencemar di Stasiun DKI 5
 </p>
 
-Berdasarkan histogram berikut, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dimanai skor skew rata-rata berada diluar range -0.5 sampai 0.5.
+Berdasarkan histogram berikut, seluruh histogram selain Histogram PM<sub>10</sub> dan PM<sub>2.5</sub> memiliki distribusi positif dimana _tail_ kanan lebih panjang dibandingkan _tail_ kiri dinamai skor skew rata-rata berada di luar range -0.5 sampai 0.5.
 
 ##### 3.6. Analisa PM<sub>2.5</sub> di Seluruh Stasiun
 
@@ -1538,7 +1538,7 @@ Teknik ini sangat simpel, namun memiliki kelemahan dimana akan kehilangan gambar
 
 Selain itu, kelemahan _NOCB_ adalah jika setelah nilai yang hilang tersebut adalah NaN juga, maka nilai yang hilang tersebut akan digantikan dengan NaN.
 
-Selain kedua teknik tersebut, terdapat teknik _Rolling Statistics_ yang bekerja dengan menggantikan nilai yang hilang dengan aggregat nilai sebelumnya sebesar _n_ dimana _n_ ini merupakan jarak atau banyak data yang ingin di aggregatkan.
+Selain kedua teknik tersebut, terdapat teknik _Rolling Statistics_ yang bekerja dengan menggantikan nilai yang hilang dengan aggregat nilai sebelumnya sebesar _n_ dimana _n_ ini merupakan jarak atau banyak data yang ingin di aggregating.
 
 Ada 3 metode untuk menggunakan metode ini, yaitu
 
@@ -1546,19 +1546,19 @@ a. _Simple Moving Average_
 
 ![Simple Moving Average Formula](https://miro.medium.com/v2/resize:fit:640/format:webp/1*GqcyY6_vA-cvcj90Tg6KdA.png)
 
-_Simple Moving Average (SMA)_ merupakan salah satu metode yang paling simpel dimana nilai data sebelumnya yang sebanyak _n_ akan di jumlahkan dan akan di bagikan dengan _n_. Sederhananya, metode ini bekerja dengan mengganti data yang hilang dengan nilai rata-rata data sebelumnya sebesar _n_-data.
+_Simple Moving Average (SMA)_ merupakan salah satu metode yang paling simpel dimana nilai data sebelumnya yang sebanyak _n_ akan dijumlahkan dan akan di bagikan dengan _n_. Sederhananya, metode ini bekerja dengan mengganti data yang hilang dengan nilai rata-rata data sebelumnya sebesar _n_-data.
 
 b. _Weighted Moving Average_
 
 ![Weighted Moving Average Formula](https://miro.medium.com/v2/resize:fit:720/format:webp/1*6PlxApRuwnKzomxEaN1zjw.png)
 
-_Weighted Moving Average (WMA)_ adalah metode lainnya dimana nilai yang akan di jumlahkan akan diberikan sebuah _weigth_ atau bobot dimana bobot ini di distribusikan secara merata sehingga jumlah keseluruhan bobotnya adalah 1 (100%). Contohnya, jika rata-rata yang ingin diambil adalah rata-rata 5 hari sebelumnya, maka bobotnya adalah: **5/15; 4/15; 3/15; 2/15; 1/15** dimana jika dijumlahkan akan menghasilkan 1.
+_Weighted Moving Average (WMA)_ adalah metode lainnya dimana nilai yang akan dijumlahkan akan diberikan sebuah _weigth_ atau bobot dimana bobot ini didistribusikan secara merata sehingga jumlah keseluruhan bobotnya adalah 1 (100%). Contohnya, jika rata-rata yang ingin diambil adalah rata-rata 5 hari sebelumnya, maka bobotnya adalah: **5/15; 4/15; 3/15; 2/15; 1/15** dimana jika dijumlahkan akan menghasilkan 1.
 
 c. _Exponential Moving Average_
 
 ![_Exponential Moving Average Formula](https://miro.medium.com/v2/resize:fit:720/format:webp/1*1tmY0vW2LmgAY4ASIWD-5A.png)
 
-_Exponential Moving Average (EMA)_ adalah metode memiliki kerja yang mirip dengan _WMA_, namun jika di _WMA_ penurunan bobotnya konsisten, penurunan pada _EMA_ bersifat eksponensial dimana nilai _alpha_ merupakan nilai _smoothing factor_ mirip seperti penentuan bobot pada _WMA_.
+_Exponential Moving Average (EMA)_ adalah metode yang memiliki kinerja mirip dengan _WMA_, namun jika di _WMA_ penurunan bobotnya konsisten, penurunan pada _EMA_ bersifat eksponensial dimana nilai _alpha_ merupakan nilai _smoothing factor_ mirip seperti penentuan bobot pada _WMA_.
 
 Teknik _Rolling Statistics_ selain dipakai untuk menggantikan data yang hilang, juga digunakan oleh pelaku _trader_ untuk memprediksi harga aset mereka di pasar.
 
@@ -1637,7 +1637,7 @@ Data dikatakan memiliki distribusi normal jika memenuhi ciri-ciri berikut:
 
 2. Tidak ada skewness (kemencengan): Distribusi normal tidak memiliki kemencengan yang signifikan. Kemencengan mengindikasikan adanya kecondongan ekor distribusi ke satu sisi. Dalam distribusi normal, ekor distribusi di kedua sisi memiliki kecondongan yang sama.
 
-3. Tidak ada kurtosis ekstrem: Distribusi normal memiliki kurtosis yang moderat. Kurtosis mengukur tingkat keekstreman ekor distribusi. Dalam distribusi normal, kurtosis tidak terlalu tinggi atau rendah, menunjukkan ekor yang tidak terlalu berat atau ringan.
+3. Tidak ada kurtosis ekstrem: Distribusi normal memiliki kurtosis yang moderat. Kurtosis mengukur tingkat keekstriman ekor distribusi. Dalam distribusi normal, kurtosis tidak terlalu tinggi atau rendah, menunjukkan ekor yang tidak terlalu berat atau ringan.
 
 4. Persentil sesuai dengan nilai z: Persentil data dalam distribusi normal sesuai dengan nilai z dalam standar deviasi. Misalnya, 68% data berada dalam satu standar deviasi dari rata-rata, 95% data berada dalam dua standar deviasi, dan 99.7% data berada dalam tiga standar deviasi.
 
@@ -1655,7 +1655,7 @@ $$Skewness = \dfrac{\sum(x - \bar x)^3}{(n-1) . S^3}$$
 
 Dimana dalam rumus ini:
 
-* X mewakili setiap titik data dalma sampel
+* X mewakili setiap titik data dalam sampel
 
 * X̄ mewakili rata-rata sampel
 
@@ -1663,7 +1663,7 @@ Dimana dalam rumus ini:
 
 * S mewakili simpangan baku (standar deviasi) sampel
 
-Sedangkan Kkrtosis mengukur keekstreman (atau bentuk ekor) dari distribusi data. Nilai kurtosis tinggi menunjukkan bahwa distribusi data memiliki ekor yang lebih berat dan puncak yang lebih tajam, sedangkan nilai kurtosis rendah menunjukkan distribusi data dengan ekor yang lebih ringan dan puncak yang lebih datar.
+Sedangkan Kurtosis mengukur keekstreman (atau bentuk ekor) dari distribusi data. Nilai kurtosis tinggi menunjukkan bahwa distribusi data memiliki ekor yang lebih berat dan puncak yang lebih tajam, sedangkan nilai kurtosis rendah menunjukkan distribusi data dengan ekor yang lebih ringan dan puncak yang lebih datar.
 
 Rumus kurtosis yang umum digunakan adalah
 
@@ -1675,7 +1675,7 @@ Sebuah distribusi data dinyatakan normal jika memenuhi aspek berikut:
 
 1. Jika skewness berkisar antara -0,5 hingga 0,5, data dapat dianggap mendekati distribusi normal.
 
-2. Jika kurtosis berkisar antara -2 hingga 2 (atau antara 2 hingga 3 jika menggunakan definisi kurtosis ekscess), data dapat dianggap mendekati distribusi normal.
+2. Jika kurtosis berkisar antara -2 hingga 2 (atau antara 2 hingga 3 jika menggunakan definisi kurtosis excess), data dapat dianggap mendekati distribusi normal.
 
 	![skewness categorical](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Relationship_between_mean_and_median_under_different_skewness.png/600px-Relationship_between_mean_and_median_under_different_skewness.png)
 
@@ -1824,7 +1824,7 @@ Untuk pengujian ini, nilai _alpha_ yang di tetapkan adalah **0.05**. Hasil dari 
 Tabel 35. Nilai <i>p-value</i> dari hasil pengujian ADF dan KPSS untuk setiap Stasiun Pemantauan
 </p>
 
-Berdasarkan hasil pengujian, nilai _p-value_ ADF dan KPSS seluruh stasiun berada dibawah 0.05, dimana berdasarkan pengujian ADF seluruhnya stasioner. Namun berdasarkan pengujian KPSS, seluruhnya tidak stasioner, sehingga seluruh data stasiun merupakan _difference stationary_. Untuk mengubah data tersebut menjadi stasioner, maka seluruh data stasiun harus dilakukan differensiasi agar data menjadi stasioner. 
+Berdasarkan hasil pengujian, nilai _p-value_ ADF dan KPSS seluruh stasiun berada dibawah 0.05, dimana berdasarkan pengujian ADF seluruhnya stasioner. Namun berdasarkan pengujian KPSS, seluruhnya tidak stasioner, sehingga seluruh data stasiun merupakan _difference stationary_. Untuk mengubah data tersebut menjadi stasioner, maka seluruh data stasiun harus dilakukan diferensiasi agar data menjadi stasioner. 
 
 _Difference_ merupakan operasi dengan mengambil selisih dari beberapa data di satu waktu.
 
@@ -1838,7 +1838,7 @@ Pada contoh diatas, dimana nilai _lag_ atau jarak waktu yang dilakukan _differen
 
 1. **_Difference Order_**
 	
-	_Difference Order_ adalah teknik differensiasi paling simpel. Cara kerjanya dengan melakukan operasi _different_ secara berulang yang disebut dengan _order_. Contohnya pada _First Order Difference_, maka rumusnya adalah
+	_Difference Order_ adalah teknik diferensiasi paling simpel. Cara kerjanya dengan melakukan operasi _different_ secara berulang yang disebut dengan _order_. Contohnya pada _First Order Difference_, maka rumusnya adalah
 
 	y'<sub>t</sub> = y<sub>t</sub> - y<sub>t-1</sub>
 
@@ -1852,7 +1852,7 @@ Pada contoh diatas, dimana nilai _lag_ atau jarak waktu yang dilakukan _differen
 
 	Dimana nilai _n_ merupakan jumlah _order_ yang dilakukan.
 
-2.  **_Lag Difference / Seasional Difference_**
+2.  **_Lag Difference / Seasonal Difference_**
 
 	_Lag Difference_ adalah metode _difference_ dimana nilai _lag_ ini merupakan jarak data yang akan dicari selisihnya. Jika mengambil contoh dari gambar sebelumnya, jika _lag_ nya adalah 2, maka data indeks **Wed** merupakan selisih dari data **Mon** dengan data **Wed**. Kemudian data di indeks **Mon** dan **Tues** akan bernilai NaN karena tidak ditemukan selisih data 2 indeks sebelumnya. Secara rumus dapat dijelaskan sebagai berikut.
 
@@ -1879,7 +1879,7 @@ Tabel 36. Nilai <i>p-value</i> dari hasil pengujian ADF dan KPSS untuk setiap St
 
 Korelasi ACF (Autocorrelation Function) dan PACF (Partial Autocorrelation Function) adalah alat statistik yang digunakan dalam analisis deret waktu untuk memahami ketergantungan atau hubungan antara nilai-nilai dalam deret waktu.
 
-Fungsi dari ACF dan PACF selain untuk melihat korelasi, juga dapat digunakan untuk mengetahui stasioneritas suatu data. Plot ACF dan PACF juga digunakan untuk mengetahui urutan model AR, MA, dan ARMA termasuk juga ARIMA. Dibagian ini, akan dijelaskan secara singkat mengenai AR dan MA.
+Fungsi dari ACF dan PACF selain untuk melihat korelasi, juga dapat digunakan untuk mengetahui stasioneritas suatu data. Plot ACF dan PACF juga digunakan untuk mengetahui urutan model AR, MA, dan ARMA termasuk juga ARIMA. Di Bagian ini, akan dijelaskan secara singkat mengenai AR dan MA.
 
 **_Auto-Regressive Model (AR)_** 
 
@@ -1906,7 +1906,7 @@ Dari penjelasan ini dapat disimpulkan bahwa untuk menentukan nilai AR dapat meli
 Gambar 48. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 1
 </p>
 
-Plot ini disebut dengan "lolipop plot" dikarena setiap garis korelasi memiliki ujung bulat seperti lolipop. Jika melihat plot diatas, terlihat _lag_ pada ACF dan PACF dimulai dari 0 dan selalu bernilai **korelasi 1**. Selain itu terdapat sebuah area yang berwarna biru. Area biru ini menggambarkan interval kepercayaan 95% dan merupakan indikator ambang signifikansi. Artinya, apa pun di dalam area biru secara statistik mendekati nol dan apa pun di luar area biru secara statistik bukan nol.
+Plot ini disebut dengan "lolipop plot" di karena setiap garis korelasi memiliki ujung bulat seperti lolipop. Jika melihat plot diatas, terlihat _lag_ pada ACF dan PACF dimulai dari 0 dan selalu bernilai **korelasi 1**. Selain itu terdapat sebuah area yang berwarna biru. Area biru ini menggambarkan interval kepercayaan 95% dan merupakan indikator ambang signifikansi. Artinya, apa pun di dalam area biru secara statistik mendekati nol dan apa pun di luar area biru secara statistik bukan nol.
 
 Untuk mengetahui urutan dari model ini dengan cara menghitung berapa jumlah "lolipop" atau _lag_ yang berada di bawah atau di atas "area biru" sebelum _lag_ berikutnya memasuki "area biru".
 
@@ -2034,7 +2034,7 @@ Tabel 37. Jumlah data hasil dari <i>Train-test split</i>
 
 ### Windowed Dataset
 
-_Windowing_ adalah suatu teknik _preprocessing data_ untuk _time series_ dengan cara melakukan pembagian suatu dataset dan menggunakan data berikutnya sebagai validasi untuk prediksinya. Contohnya seperti berikut, diasumsikan terdapat suatu kolom dari _time series_ dengan deretan sebagai berikut
+_Windowing_ adalah suatu teknik _preprocessing data_ untuk _time series_ dengan cara melakukan pembagian suatu dataset dan menggunakan data berikutnya sebagai validasi untuk prediksinya. Contohnya seperti berikut, diasumsikan terdapat suatu kolom dari _time series_ dengan deret sebagai berikut
 
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -2048,7 +2048,7 @@ Dan akan dilakukan _preprocessing_ dengan ukuran _window_ sebesar **7**, maka ha
 
 Dari hasil berikut, dapat disimpulkan bahwa konsep dari _windowing_ ini mirip dengan konsep _train-test split_ dimana akan ada data yang dipotong dengan ukuran _window_ yang akan jadi data latih kemudian nilai berikutnya yang menjadi nilai _test_ atau harapan yang ingin dicapai.
 
-Namun jika diperhatikan, nilai awal dari setiap _array_ akan bergerak maju setiap ada _array_ baru. Teknik ini yang disebut dengan _Sliding Window_ . Sedangkan metode lainnya yaitu _Expanding Window_ dimana ukuran _window_ untuk data latih akan semakin membersar seperti contoh berikut.
+Namun jika diperhatikan, nilai awal dari setiap _array_ akan bergerak maju setiap ada _array_ baru. Teknik ini yang disebut dengan _Sliding Window_ . Sedangkan metode lainnya yaitu _Expanding Window_ dimana ukuran _window_ untuk data latih akan semakin membesar seperti contoh berikut.
 
 ```
 [0, 1,  2, 3, 4, 5, 6] -> [7]
@@ -2088,12 +2088,12 @@ Dalam model ARIMA, kita menentukan tiga angka dalam format ARIMA(p, d, q), di ma
 
 * q adalah jumlah lag yang diperhitungkan dalam komponen moving average. Semakin besar nilai q, semakin banyak kesalahan masa lalu yang diperhitungkan untuk memprediksi kesalahan di masa depan.
 
-Dikarena hal tersebut, penerapan plot ACF dan PACF digunakan untuk menentukan parameter _p_ dan _q_.
+Karena hal tersebut, penerapan plot ACF dan PACF digunakan untuk menentukan parameter _p_ dan _q_.
 
 **Kelebihan dari ARIMA**
 * Arsitektur dan penerapan yang sangat sederhana
 * ARIMA menggunakan jumlah observasi terakhir dalam peramalan, yang membuatnya lebih cocok untuk data deret waktu yang memiliki ketergantungan jangka pendek
-* Dikarenakan arsitektur nya sederhana, proses pelatihan dan prediksi model ARIMA menjadi cepat walaupun di jalankan di mode _CPU_
+* Dikarenakan arsitektur nya sederhana, proses pelatihan dan prediksi model ARIMA menjadi cepat walaupun dijalankan di mode _CPU_
 
 **Kekurangan dari ARIMA**
 * ARIMA kurang efektif dalam menangani data deret waktu yang memiliki pola jangka panjang atau pola yang rumit
@@ -2137,7 +2137,7 @@ Sedangkan untuk _loss function_ menggunakan _Hubber_ dengan metrik MAE dan _opti
 
 ## Evaluation
 
-Untuk pengujian akan menggunkan 3 metrik evaluasi, yaitu _Mean Average Error (MAE)_, _Mean Square Error (MSE)_ dan _Root Mean Square Error (RMSE)_.
+Untuk pengujian akan menggunakan 3 metrik evaluasi, yaitu _Mean Average Error (MAE)_, _Mean Square Error (MSE)_ dan _Root Mean Square Error (RMSE)_.
 
 ###  _Mean Absolute Error (MAE)_
 
@@ -2366,4 +2366,3 @@ Kwiatkowski, D., Phillips, P. C. B., Schmidt, P., & Shin, Y. (1992). Testing the
 ‌Dolphin, R. (2021, March 26).  _LSTM Networks | A Detailed Explanation_. Medium. https://towardsdatascience.com/lstm-networks-a-detailed-explanation-8fae6aefc7f9
 
 ‌
-
