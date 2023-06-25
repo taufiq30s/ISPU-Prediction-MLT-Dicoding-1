@@ -1570,13 +1570,13 @@ a. _linear_
 
 Teknik ini bekerja dengan melakukan asumsi hubungan secara linear lurus antar rentang titik data
 
-![Linear Function Graph](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/LinearInterpolation.svg/256px-LinearInterpolation.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/LinearInterpolation.svg/256px-LinearInterpolation.svg.png" alt="Linear Function Graph">
 
 b. _spline_
 
 Teknik ini bekerja dengan memperkirakan nilai yang meminimalisir kelengkungan sehingga memperoleh lengkungan fungsi yang lebih halus.
 
-![Spline Function Graph](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Parametic_Cubic_Spline.svg/350px-Parametic_Cubic_Spline.svg.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Parametic_Cubic_Spline.svg/350px-Parametic_Cubic_Spline.svg.png" alt="Spline Function Graph">
 
 c. _time_
 
@@ -1585,7 +1585,8 @@ Teknik ini bekerja dengan memperkirakan nilai yang berfokus pada titik terdekatn
 Pada proyek ini, akan dilakukan penerapan _Spline Interpolation_ dan _time Interpolation_ untuk mengetahui metode mana yang lebih efektif dan dapat meningkatkan akurasi prediksi. Hasil dari penerapan metode tersebut dapat dilihat pada grafik berikut ini untuk setiap stasiun
 
 **Perbandingan (Stasiun DKI 1)**
-![Data perbandingan stasiun 1](https://media.discordapp.net/attachments/1121095008926302358/1121672550221619220/join.png)
+
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121672550221619220/join.png" alt="Data perbandingan stasiun 1">
 
 <p align = "center">  
 Gambar 36. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metode <i>spline</i> dan <i>time interpolation</i> pada data NO<sub>2</sub> Stasiun DKI 1
@@ -1593,7 +1594,7 @@ Gambar 36. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metod
 
 **Perbandingan (Stasiun DKI 2)**
 
-![Data Perbandingan stasiun dki 2](https://media.discordapp.net/attachments/1121095008926302358/1121672550611685436/join.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121672550611685436/join.png" alt="Data perbandingan stasiun 2">
 
 <p align = "center">  
 Gambar 37. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metode <i>spline</i> dan <i>time interpolation</i> pada data NO<sub>2</sub> Stasiun DKI 2
@@ -1601,7 +1602,7 @@ Gambar 37. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metod
 
 **Perbandingan (Stasiun DKI 3)**
 
-![Data perbandingan stasiun dki 3](https://media.discordapp.net/attachments/1121095008926302358/1121672550968205322/join.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121672550968205322/join.png" alt="Data perbandingan stasiun 3">
 
 <p align = "center">  
 Gambar 38. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metode <i>spline</i> dan <i>time interpolation</i> pada data NO<sub>2</sub> Stasiun DKI 3
@@ -1609,7 +1610,7 @@ Gambar 38. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metod
 
 **Perbandingan (Stasiun DKI 4)**
 
-![Data perbandingan stasiun 4](https://media.discordapp.net/attachments/1121095008926302358/1121672551270207518/join.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121672551270207518/join.png" alt="Data perbandingan stasiun 4">
 
 <p align = "center">  
 Gambar 39. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metode <i>spline</i> dan <i>time interpolation</i> pada data NO<sub>2</sub> Stasiun DKI 4
@@ -1617,7 +1618,7 @@ Gambar 39. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metod
 
 **Perbandingan (Stasiun DKI 5)**
 
-![Data perbandingan stasiun 5](https://media.discordapp.net/attachments/1121095008926302358/1121672551660261486/join.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121672551660261486/join.png" alt="Data perbandingan stasiun 5">
 
 <p align = "center">  
 Gambar 40. Grafik Perbandingan data asli dengan hasil imputasi menggunakan metode <i>spline</i> dan <i>time interpolation</i> pada data NO<sub>2</sub> Stasiun DKI 5
@@ -1677,7 +1678,7 @@ Sebuah distribusi data dinyatakan normal jika memenuhi aspek berikut:
 
 2. Jika kurtosis berkisar antara -2 hingga 2 (atau antara 2 hingga 3 jika menggunakan definisi kurtosis excess), data dapat dianggap mendekati distribusi normal.
 
-	![skewness categorical](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Relationship_between_mean_and_median_under_different_skewness.png/600px-Relationship_between_mean_and_median_under_different_skewness.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Relationship_between_mean_and_median_under_different_skewness.png/600px-Relationship_between_mean_and_median_under_different_skewness.png" alt="skewness categorical">
 
 <p align = "center">  
 Gambar 41. Perbedaan grafik skew positif, skew negatif, dan distribusi normal
@@ -1717,7 +1718,7 @@ $$
 
 **Perbandingan (Stasiun DKI 1)**
 
-![Perbandingan Skewness di DKI 1](https://media.discordapp.net/attachments/1121095008926302358/1121433725511667742/join.jpeg)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121433725511667742/join.jpeg" alt="Perbandingan Skewness di DKI 1">
 
 <p align = "center">  
 Gambar 42. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew menggunakan metode logaritmik dan <i>Box-Cox</i> pada data NO<sub>2</sub> Stasiun DKI 1
@@ -1725,7 +1726,7 @@ Gambar 42. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew men
 
 **Perbandingan (Stasiun DKI 2)**
 
-![Perbandingan Skewness di DKI 2](https://media.discordapp.net/attachments/1121095008926302358/1121433725830447104/join.jpeg)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121433725830447104/join.jpeg" alt="Perbandingan Skewness di DKI 2">
 
 <p align = "center">  
 Gambar 43. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew menggunakan metode logaritmik dan <i>Box-Cox</i> pada data NO<sub>2</sub> Stasiun DKI 2
@@ -1733,7 +1734,7 @@ Gambar 43. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew men
 
 **Perbandingan (Stasiun DKI 3)**
 
-![Perbandingan Skewness di DKI 3](https://media.discordapp.net/attachments/1121095008926302358/1121433726161784902/join.jpeg)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121433726161784902/join.jpeg" alt="Perbandingan Skewness di DKI 3">
 
 <p align = "center">  
 Gambar 44. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew menggunakan metode logaritmik dan <i>Box-Cox</i> pada data NO<sub>2</sub> Stasiun DKI 3
@@ -1741,7 +1742,7 @@ Gambar 44. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew men
 
 **Perbandingan (Stasiun DKI 4)**
 
-![Perbandingan Skewness di DKI 4](https://media.discordapp.net/attachments/1121095008926302358/1121433726161784902/join.jpeg)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121433726161784902/join.jpeg" alt="Perbandingan Skewness di DKI 4">
 
 <p align = "center">  
 Gambar 45. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew menggunakan metode logaritmik dan <i>Box-Cox</i> pada data NO<sub>2</sub> Stasiun DKI 4
@@ -1749,7 +1750,7 @@ Gambar 45. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew men
 
 **Perbandingan (Stasiun DKI 5)**
 
-![Perbandingan Skewness di DKI 5](https://media.discordapp.net/attachments/1121095008926302358/1121433726447009833/join.jpeg)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121433726447009833/join.jpeg" alt="Perbandingan Skewness di DKI 5">
 
 <p align = "center">  
 Gambar 46. Grafik Perbandingan distribusi asli dengan hasil normalisasi skew menggunakan metode logaritmik dan <i>Box-Cox</i> pada data NO<sub>2</sub> Stasiun DKI 5
@@ -1828,7 +1829,7 @@ Berdasarkan hasil pengujian, nilai _p-value_ ADF dan KPSS seluruh stasiun berada
 
 _Difference_ merupakan operasi dengan mengambil selisih dari beberapa data di satu waktu.
 
-![how difference works](https://sp-ao.shortpixel.ai/client/to_auto,q_lossless,ret_img,w_1024,h_840/https://dataindependent.com/wp-content/uploads/2021/12/Screen-Shot-2020-09-22-at-7.37.51-AM-1024x840-1.png)
+<img src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossless,ret_img,w_1024,h_840/https://dataindependent.com/wp-content/uploads/2021/12/Screen-Shot-2020-09-22-at-7.37.51-AM-1024x840-1.png" alt="how difference works">
 
 <p align = "center">  
 Gambar 47. Cara kerja <i>Difference</i> dengan nilai <i>lag</i> 1
@@ -1900,7 +1901,7 @@ Jika merujuk pada plot ACF dan P-ACF, plot ACF dapat digunakan untuk mengetahui 
 
 Dari penjelasan ini dapat disimpulkan bahwa untuk menentukan nilai AR dapat melihat dari plot P-ACF. Begitu dengan MA dengan melihat plot ACF. Untuk memperjelas, dapat dilihat dari plot ACF dan P-ACF **Stasiun DKI 1** berikut.
 
-![ACF PACF DKI 1](https://media.discordapp.net/attachments/1121095008926302358/1121467631921275010/dki1.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121467631921275010/dki1.png" alt="ACF PACF DKI 1">
 
 <p align = "center">  
 Gambar 48. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 1
@@ -1914,7 +1915,7 @@ Pada contoh ACF dan PACF DKI 1 ini, di plot ACF terdapat 5 _lag_ yang berada di 
 
 **ACF dan PACF DKI 2**
 
-![ACF PACF DKI 2](https://media.discordapp.net/attachments/1121095008926302358/1121467632189718539/dki2.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121467632189718539/dki2.png" alt="ACF PACF DKI 2">
 
 <p align = "center">  
 Gambar 49. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 2
@@ -1922,7 +1923,7 @@ Gambar 49. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 2
 
 **ACF dan PACF DKI 3**
 
-![ACF PACF DKI 3](https://media.discordapp.net/attachments/1121095008926302358/1121467632634298501/dki3.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121467632634298501/dki3.png" alt="ACF PACF DKI 3">
 
 <p align = "center">  
 Gambar 50. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 3
@@ -1930,7 +1931,7 @@ Gambar 50. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 3
 
 **ACF dan PACF DKI 4**
 
-![ACF PACF DKI 4](https://media.discordapp.net/attachments/1121095008926302358/1121467632906944552/dki4.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121467632906944552/dki4.png" alt="ACF PACF DKI 5">
 
 <p align = "center">  
 Gambar 51. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 4
@@ -1938,7 +1939,7 @@ Gambar 51. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 4
 
 **ACF dan PACF DKI 5**
 
-![ACF PACF DKI 5](https://media.discordapp.net/attachments/1121095008926302358/1121467633208918036/dki5.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121467633208918036/dki5.png" alt="ACF PACF DKI 5">
 
 <p align = "center">  
 Gambar 52. Plot ACF dan PACF NO<sub>2</sub> Stasiun DKI 5
@@ -2056,7 +2057,7 @@ Namun jika diperhatikan, nilai awal dari setiap _array_ akan bergerak maju setia
 [0, 1, 2,  3, 4, 5, 6, 7, 8] -> [9]
 ```
 
-![Sliding vs Expanding Window](https://www.mlq.ai/content/images/size/w1000/2022/10/image6-e1536165830511.png)
+<img src="https://www.mlq.ai/content/images/size/w1000/2022/10/image6-e1536165830511.png" alt="LSTM Arcitecture">
 
 <p align = "center">  
 Gambar 53. Perbedaan antara <i>Sliding Window</i> dengan <i>Expanding Window</i>
@@ -2108,7 +2109,7 @@ _LSTM (Long Short-Term Memory)_ adalah jenis arsitektur jaringan saraf yang digu
 
 LSTM merupakan pengembangan dari _Recrusive Neural Network (RNN)_. LSTM memiliki arsitektur sebagai berikut.
 
-![LSTM Arcitecture](https://miro.medium.com/v2/resize:fit:720/format:webp/1*jikKbzFXCq-IYnFZankIMg.png)
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*jikKbzFXCq-IYnFZankIMg.png" alt="LSTM Arcitecture">
 
 <p align = "center">  
 Gambar 54. Arsitektur LSTM
@@ -2127,7 +2128,7 @@ Gambar 54. Arsitektur LSTM
 
 Pada proyek ini, penulis membangun model LSTM dengan arsitektur sebagai berikut ini.
 
-![LSTM Model](https://media.discordapp.net/attachments/1121095008926302358/1121482722100125696/image.png)
+<img src="https://media.discordapp.net/attachments/1121095008926302358/1121482722100125696/image.png" alt="LSTM Model">
 
 <p align = "center">  
 Gambar 55. Arsitektur Model LSTM yang akan digunakan
@@ -2318,6 +2319,13 @@ Kesimpulan yang didapatkan dalam proyek ini adalah
 
 * Perlambatan pergerakan beberapa komponen pencemar udara pada akhir tahun 2020 dan sepanjang tahun 2021 bertepatan dengan pemberlakuan Pembatasan Sosial Berskala Besar (PSBB) dan Pembatasan Pergerakan Kegiatan Bermasyarakat (PPKM)
 * Berdasarkan hasil pengujian bahwa model LSTM memberikan hasil yang lebih baik dibandingkan menggunakan model ARIMA dengan hasil MAE 10.32%, MSE 22.05% dan RMSE 12.45% lebih baik di model LSTM dibandingkan dengan ARIMA
+
+## Special Thanks
+
+- Kato [MAZ] (Discord: @katorariii_)
+- Arcana (Discord: @ar_kana)
+- Alif Ramadhan (Discord: @nna_kana)
+- Dan teman-teman Rondatelier yang memberikan dukungan dan semangat untuk penulis
 
 ## Referensi
 
